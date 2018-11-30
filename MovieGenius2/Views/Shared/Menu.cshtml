@@ -1,0 +1,38 @@
+﻿
+@model IEnumerable<Movie>
+
+
+<div class="sidebar">
+    <div class="search">
+        <input id="searchText" placeholder="Search for a Movie" class="searchInput" />
+    </div>
+
+    <div class="upcoming">
+        <h4>Upcoming Movies</h4>
+        @foreach (var item in Model)
+        {
+            <div class="upcomingMovie">
+                <table>
+                    <tr>
+                         <td>
+                            <div class="upcomingPoster">
+                                <a id="@item.id" href="@Url.Action("Details", "Home", new { id = item.id })">
+                                    <img class="image" src="@Url.Content( "http://image.tmdb.org/t/p/w185" + @item.poster_path )" />
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="upcomingInfo">
+                                <a href="@Url.Action("Details", "Home", new { id = item.id })" id="moviename" class="upcomingTitle">@item.title</a><br />
+                                Release: <label>@item.release_date</label> <br />
+                                @{/*todo remove rating */}
+                                Rating: <label>@item.vote_average</label> <br />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        }
+    </div>
+
+</div>

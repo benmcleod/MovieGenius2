@@ -1,0 +1,272 @@
+﻿
+/*#region details */
+
+
+.movie-details {
+    padding: 20px 10px;
+    margin-bottom: 20px;
+}
+
+    .movie-details img.background {
+        opacity: .2;
+        position:absolute;
+    }
+
+    .movie-details img.image {
+        float: left;
+        width: 180px;
+        height: 266px;
+    }
+
+.movie-details div.pro-description {
+    margin-left: 180px;
+    min-height: 170px;
+    padding: 6px 14px;
+}
+
+.movie-details .synopsis {
+    margin-bottom: 5px;
+    padding-top: 10px;
+    border-top: 1px dotted #cccccc;
+}
+
+
+
+div.pro-description h4, .theatre-header {
+    color: black;
+    font-size: 1.4em;
+    margin: 0 0 4px 0;
+}
+
+div.pro-description span {
+    border: thin solid #CC9900;
+    padding: 2px;
+    font-size: 1.1em;
+    color: #CC9900;
+    display: inline-block;
+    font-weight: bold;
+}
+
+div.pro-description .synopsis {
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+    .movie-details a, .movie-summary a, .sideContentHolder table a {
+        text-decoration: none;
+    }
+
+
+/*#endregion */
+
+
+/*#region movie summary*/
+
+
+.content h2 {
+    margin-left: 15px;
+}
+
+
+.movie-summary img.image {
+    float: left;
+    width: 126px;
+    height: 187px;
+}
+
+.movie-summary div.pro-description {
+    margin-left: 126px;
+    min-height: 187px;
+    max-height: 187px;
+    padding: 0px 4px 0px 6px;
+}
+
+.movie-summary {
+    border-bottom: thin solid #cccccc;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+/*#endregion*/
+
+
+/*#region navbar*/
+
+.container .navbar-brand {
+    height: 70px;
+    padding: 3px;
+}
+
+.navbar-brand > img {
+    height: 100%;
+    padding: 5px;
+    width: auto;
+}
+
+.container .nav > li > a {
+    font-size: large;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.container .navbar-toggle {
+    padding: 30px;
+    margin: 25px 15px 25px 0;
+}
+
+/*#endregion*/
+
+
+/*#region body */
+
+.body {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 30px;
+}
+
+.main {
+    margin-left: 280px;
+}
+
+/*#endregion */
+
+
+/*#region sidebar */
+
+.sidebar {
+    width: 280px;
+    height: 100%;
+    min-height: 100%;
+    position: absolute;
+}
+
+/*#region search */
+div.search {
+    margin: 10px auto 20px;
+    max-width: 250px;
+    min-height: 35px;
+    color: #FFFFFF;
+}
+
+
+input.searchInput {
+    font-size: 0.90em;
+    color: black;
+    height: 35px;
+    padding: 0 0 0 20px;
+    width: 250px;
+    border: none;
+    background: url(../images/search_box_page.png) no-repeat 0px 0px;
+    outline: none;
+}
+
+ul.ui-autocomplete {
+    list-style: none;
+}
+
+
+.rating {
+    float: right;
+    position: relative;
+    top: 2px;
+    right: 2px;
+}
+
+.thumb {
+    float: left;
+    position: relative;
+}
+
+.searchtitle {
+    font-size: 16px;
+    text-decoration-color: blue;
+}
+
+.searchcenter {
+    position: absolute;
+    left: 0px;
+    width: 200px;
+}
+
+
+.thumb ui-corner-all {
+    width: inherit;
+}
+
+
+.ui-widget-content {
+    background-color: white;
+    border: 2px solid #cccccc;
+    border-radius: 0.3em;
+    padding-left: 3px;
+}
+
+.ui-autocomplete {
+    background: white;
+    border-radius: 1px;
+}
+
+.ui-state-focus {
+    background: white;
+}
+
+.ui-state-hover, .ui-autocomplete li:hover {
+    background: rgba(232, 255, 185, 0.84);
+    border: 2px solid #ede19d;
+    border-radius: 0.5em;
+    outline: none;
+    margin:0px;
+    
+}
+
+.ui-menu-item
+{
+    margin:2px;
+}
+
+
+div#search {
+    margin: 10px auto;
+    max-width: 250px;
+    min-height: 35px;
+    color: #FFFFFF;
+}
+
+.autocompleteList {
+    margin: 0px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*#endregion */
+
+
+/*#region upcomingMovies */
+.upcoming h4 {
+    margin-left: 8px;
+}
+
+.upcomingPoster img.image {
+    height: 80px;
+    width: 60px;
+}
+
+.upcomingMovie {
+    margin: 6px;
+}
+
+.upcomingInfo {
+    margin-left: 6px;
+}
+
+    .upcomingInfo a {
+        font-size: 16px;
+    }
+
+/*#endregion */
+
+/*#endregion */

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Movie>
+
+<div class="content">
+    <h2>Now Playing</h2>
+        <div class="row">
+            @{
+                int i = 0;
+            }
+            @foreach (var item in Model)
+            {
+                if (i > 0 && i % 2 == 0)
+                {
+                @:</div><div class="row">
+                }
+                i++;
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="movie-summary">
+                        <a id="@item.id" href = "@Url.Action("Details", "Home", new { id = item.id })">
+                            <img class="image" src="@Url.Content("http://image.tmdb.org/t/p/w185" + @item.poster_path)" />
+                        </a>
+                        <div class="pro-description">
+                            <h4>
+                                <a href="@Url.Action("Details", "Home", new { id = item.id })" id="@item.id" class="title">@item.title</a>
+                            </h4>
+
+                            <div class="synopsis">
+                                @item.overview
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+</div>
+

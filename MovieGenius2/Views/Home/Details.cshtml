@@ -1,0 +1,68 @@
+﻿@model Movie
+
+<div class="content">
+
+    <div class="movie-details" style="background-image:url(@Model.backdrop_path); background-repeat:no-repeat; background-size:cover; height:350px; background-position: 50% 50%; opacity:.2;">
+
+        @{ /*todo: fix background image*/ }
+
+        <img class="image" src="@Url.Content("http://image.tmdb.org/t/p/w185" + @Model.poster_path)" />
+
+        <div class="pro-description">
+            <h4>
+                @Model.title
+            </h4>
+            <div>
+                Release Date:
+                <b>
+                    @Model.release_date
+                </b>
+                <br />
+                Runtime:
+                <b>
+                    @Model.runtime
+                </b>
+                <br />
+                Critics Rating:
+                <b>
+                    @Model.vote_average
+                </b>
+                <br /><br /><br />
+
+            </div>
+        </div>
+    </div>
+    <div>
+
+        <img class="image" src="@Url.Content("http://image.tmdb.org/t/p/w185" + @Model.poster_path)" />
+        <div>
+            <div class="synopsis">
+                Synopsis:
+                <br />
+                @Model.overview
+                <br /><br />
+            </div>
+
+            Director(s):
+            <b>
+                @Model.credits.crew[0].name
+            </b>
+            <br /><br />
+
+        </div>
+        <div class="synopsis">
+            Genre(s):
+            <b>
+                @Model.genres[0].name
+            </b>
+            <br /><br />
+            Cast(s):
+            <b>
+                @Model.credits.cast[0].name
+            </b>
+            <br /><br />
+        </div>
+        <iframe width="580" height="345" src=@Model.key></iframe>
+    </div>
+
+</div>
