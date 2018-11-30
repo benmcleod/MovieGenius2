@@ -1,0 +1,11 @@
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\bin\Debug\TMDBClassLibrary.dll
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\bin\Debug\TMDBClassLibrary.pdb
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\bin\Debug\RestSharp.dll
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\bin\Debug\RestSharp.xml
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\obj\Debug\TMDBClassLibrary.csprojAssemblyReference.cache
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\obj\Debug\TMDBClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\obj\Debug\TMDBClassLibrary.csproj.CopyComplete
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\obj\Debug\TMDBClassLibrary.dll
+C:\Users\Ben\Documents\GitHub\TMDBClassLibrary\TMDBClassLibrary\obj\Debug\TMDBClassLibrary.pdb
