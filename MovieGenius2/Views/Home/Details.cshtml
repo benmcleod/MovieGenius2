@@ -2,7 +2,7 @@
 
 <div class="content">
 
-    <div class="movie-details" style="background-image:url(@Model.backdrop_path); background-repeat:no-repeat; background-size:cover; height:350px; background-position: 50% 50%; opacity:.2;">
+    <div class="movie-details">
 
         @{ /*todo: fix background image*/ }
 
@@ -28,14 +28,7 @@
                     @Model.vote_average
                 </b>
                 <br /><br /><br />
-
             </div>
-        </div>
-    </div>
-    <div>
-
-        <img class="image" src="@Url.Content("http://image.tmdb.org/t/p/w185" + @Model.poster_path)" />
-        <div>
             <div class="synopsis">
                 Synopsis:
                 <br />
@@ -56,7 +49,7 @@
                 @Model.genres[0].name
             </b>
             <br /><br />
-            Cast(s):
+            Cast:
             <b>
                 @Model.credits.cast[0].name
             </b>

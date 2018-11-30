@@ -38,7 +38,7 @@ namespace MovieGenius2.Controllers
 
             rootObject.genres[0].name = string.Join(", ", rootObject.genres.Select(x => x.name));
 
-            rootObject.credits.cast[0].name = string.Join(", ", rootObject.credits.cast.Select(x => x.name).ToList());
+            rootObject.credits.cast[0].name = string.Join(", ", rootObject.credits.cast.Select(x => x.name).Take(16).ToList());
 
             rootObject.credits.crew[0].name = string.Join(", ", rootObject.credits.crew.FindAll(x => x.job.Equals("Director")).Select(x => x.name).ToList());
 
