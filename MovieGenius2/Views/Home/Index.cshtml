@@ -38,5 +38,17 @@
         }
 
     </div>
+    <br />
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="@Url.Action("Index", "Home", new { index = ViewBag.index - 1})">Previous</a></li>
+            
+            @for (int j = ViewBag.startPages; j < ViewBag.endPages; j++)
+            {
+            <li class="page-item"><a class="page-link" href="@Url.Action("Index", "Home", new { index = @j })">@j</a></li>
+            }
+            <li class="page-item"><a class="page-link" href="@Url.Action("Index", "Home", new { index = ViewBag.index + 1 })">Next</a></li>
+        </ul>
+    </nav>
 </div>
 

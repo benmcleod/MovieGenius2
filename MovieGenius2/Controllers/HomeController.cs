@@ -11,15 +11,17 @@ namespace MovieGenius2.Controllers
 
         // todo paging
 
-        public ActionResult Index()
+        public ActionResult Index(int index = 1)
         {
-            RootObject rootObject = movieService.FindMoviesInTheaterList(1, WebConfigurationManager.AppSettings["TMDBApiKey"]);
+            RootObject rootObject = movieService.FindMoviesInTheaterList(index, WebConfigurationManager.AppSettings["TMDBApiKey"]);
 
             for (int i = 0; i < rootObject.movies.Count; i++)
             { 
                 rootObject.movies[i].overview = rootObject.movies[i].overview.Split('.').First();
             }
-
+            ViewBag.index = index;
+            ViewBag.startPages = (index - 5 >= 1) ? index - 5 : 1;
+            ViewBag.endPages = (index + 5 <= rootObject.total_pages) ? index + 5 : rootObject.total_pages;
             return View(rootObject.movies);
         }
         

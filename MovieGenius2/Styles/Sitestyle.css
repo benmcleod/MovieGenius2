@@ -81,14 +81,16 @@ div.pro-description .synopsis {
 .movie-summary div.pro-description {
     margin-left: 126px;
     min-height: 187px;
-    max-height: 187px;
+    /*max-height: 187px;*/
     padding: 0 4px 0 6px;
+    height: 100%;
 }
 
 .movie-summary {
     border-bottom: thin solid #cccccc;
     padding-bottom: 12px;
     margin-bottom: 12px;
+    height: 100%;
 }
 /*#endregion*/
 
@@ -98,6 +100,10 @@ div.pro-description .synopsis {
 .container .navbar-brand {
     /*height: 40px;*/
     padding: 3px;
+}
+
+.navbar{
+    padding:0;
 }
 
 .navbar-brand > img {
@@ -125,7 +131,7 @@ div.pro-description .synopsis {
 .body {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .main {

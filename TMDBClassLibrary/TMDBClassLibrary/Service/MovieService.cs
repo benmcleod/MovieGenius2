@@ -22,6 +22,7 @@ namespace TMDBClassLibrary.Service
 
         private const string LIST_MOVIE_SEARCH = @"https://api.themoviedb.org/3/search/movie?api_key={0}&language=en-US&query={2}&page={1}&include_adult=false";
 
+        private const string LIST_LATEST = @"https://api.themoviedb.org/3/movie/latest?api_key={0}&language=en-US";
 
         public RootObject FindMovieSearch(int page, string searchText, string ApiKey)
         {
@@ -32,6 +33,13 @@ namespace TMDBClassLibrary.Service
         public RootObject FindRecommendations(int page, int id, string ApiKey)
         {
             var url = string.Format(LIST_RECOMMENDATIONS, ApiKey, page, id);
+            return GetJsonResponse<RootObject>(url);
+        }
+
+
+        public RootObject FindLatestMovies(int page, string ApiKey)
+        {
+            var url = string.Format(LIST_LATEST, ApiKey, page);
             return GetJsonResponse<RootObject>(url);
         }
 

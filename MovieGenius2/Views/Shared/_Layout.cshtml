@@ -23,7 +23,7 @@
                     </a>
                 </div>
 
-                @{ /*todo change navbar*/ }
+                @{ /*todo add navbar links*/ }
                 <div id="navbar1" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#">Home</a></li>
@@ -55,13 +55,11 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
+    @Styles.Render("~/Content/css")
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-    <script src="~/Scripts/bxslider.js"></script>
-
-
-    @Styles.Render("~/Content/css")
 
     @RenderSection("scripts", required: false)
 </body>

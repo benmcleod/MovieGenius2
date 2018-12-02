@@ -11,7 +11,8 @@ namespace MovieGenius2
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/Search.js",
-                        "~/Scripts/jquery-ui-1.12.1.js"));
+                        "~/Scripts/jquery-ui-1.12.1.js",
+                        "~/Scripts/bxslider.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
