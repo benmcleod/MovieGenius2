@@ -14,7 +14,7 @@
 
 
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:black">
+        <nav class="navbar navbar-inverse fixed-top navbar-expand" style="background-color:black">
             <div class="container-fluid">
                 <div class="navbar-header">
 
@@ -38,11 +38,17 @@
     <div class="body">
         <div class="page">
 
-            @Html.Action("Menu")
+            @Html.Action("SearchBar")
+            <div class="row">
+                <div class="col-md-3 order-md-first order-last">
+                    @Html.Action("Menu")
+                </div>
+                <div class="col-md-8">
+                    @RenderBody()
+                </div>
 
-            <div class="main">
-                @RenderBody()
             </div>
+
         </div>
     </div>
 

@@ -7,12 +7,12 @@
     margin-bottom: 20px;
 }
 
-    .movie-details img.background {
+    .movie-details .background {
         opacity: .2;
         position:absolute;
     }
 
-    .movie-details img.image {
+    .movie-details .image {
         float: left;
         width: 180px;
         height: 266px;
@@ -63,6 +63,9 @@ div.pro-description .synopsis {
 
 /*#region movie summary*/
 
+.content{
+    margin-top:-16px;
+}
 
 .content h2 {
     margin-left: 15px;
@@ -79,7 +82,7 @@ div.pro-description .synopsis {
     margin-left: 126px;
     min-height: 187px;
     max-height: 187px;
-    padding: 0px 4px 0px 6px;
+    padding: 0 4px 0 6px;
 }
 
 .movie-summary {
@@ -93,7 +96,7 @@ div.pro-description .synopsis {
 /*#region navbar*/
 
 .container .navbar-brand {
-    height: 70px;
+    /*height: 40px;*/
     padding: 3px;
 }
 
@@ -120,13 +123,13 @@ div.pro-description .synopsis {
 /*#region body */
 
 .body {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 100px;
 }
 
 .main {
-    margin-left: 280px;
+    margin-top:120px;
 }
 
 .bxslider{
@@ -134,7 +137,7 @@ div.pro-description .synopsis {
 }
 
 .bx-wrapper{
-    margin-bottom:0px;
+    margin-bottom:0;
     margin:auto;
 }
 
@@ -143,30 +146,30 @@ div.pro-description .synopsis {
 
 /*#region sidebar */
 
-.sidebar {
+/*.sidebar {
     width: 280px;
     height: 100%;
     min-height: 100%;
     position: absolute;
-}
+}*/
 
 /*#region search */
-div.search {
-    margin: 10px auto 20px;
+.search {
+    margin: 10px 10px 20px 10px;
     max-width: 250px;
     min-height: 35px;
     color: #FFFFFF;
 }
 
 
-input.searchInput {
+.searchInput {
     font-size: 0.90em;
     color: black;
     height: 35px;
     padding: 0 0 0 20px;
     width: 250px;
     border: none;
-    background: url(../images/search_box_page.png) no-repeat 0px 0px;
+    background: url(../images/search_box_page.png) no-repeat 0 0;
     outline: none;
 }
 
@@ -194,7 +197,7 @@ ul.ui-autocomplete {
 
 .searchcenter {
     position: absolute;
-    left: 0px;
+    left: 0;
     width: 200px;
 }
 
@@ -221,12 +224,12 @@ ul.ui-autocomplete {
 }
 
 .ui-state-hover, .ui-autocomplete li:hover {
+    background: #e8ffb9;
     background: rgba(232, 255, 185, 0.84);
     border: 2px solid #ede19d;
     border-radius: 0.5em;
     outline: none;
-    margin:0px;
-    
+    margin: 0;
 }
 
 .ui-menu-item
@@ -235,7 +238,7 @@ ul.ui-autocomplete {
 }
 
 
-div#search {
+#search {
     margin: 10px auto;
     max-width: 250px;
     min-height: 35px;
@@ -243,7 +246,7 @@ div#search {
 }
 
 .autocompleteList {
-    margin: 0px;
+    margin: 0;
     display: block;
     width: 100%;
     height: 100%;

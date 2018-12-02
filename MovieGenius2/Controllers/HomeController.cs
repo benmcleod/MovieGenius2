@@ -57,5 +57,10 @@ namespace MovieGenius2.Controllers
             return PartialView(rootObject.movies.Take(10));
         }
 
+        public ActionResult SearchBar()
+        {
+            return PartialView();
+        }
+
     }
 }
