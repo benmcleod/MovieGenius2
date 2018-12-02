@@ -129,6 +129,15 @@ div.pro-description .synopsis {
     margin-left: 280px;
 }
 
+.bxslider{
+    margin:auto;
+}
+
+.bx-wrapper{
+    margin-bottom:0px;
+    margin:auto;
+}
+
 /*#endregion */
 
 

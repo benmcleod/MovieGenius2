@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Movie>
+
+
+<div class="bxslider">
+
+    @foreach (var item in Model)
+    {
+
+    <div>
+
+        <a id="@item.id" href="@Url.Action("Details", "Home", new { id = item.id })">
+            <img src="@Url.Content( "http://image.tmdb.org/t/p/w185" + @item.poster_path )" />
+        </a>
+    </div>
+
+    }
+
+
+
+</div>

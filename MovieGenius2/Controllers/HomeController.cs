@@ -8,6 +8,9 @@ namespace MovieGenius2.Controllers
     public class HomeController : Controller
     {
         MovieService movieService = new MovieService();
+
+        // todo paging
+
         public ActionResult Index()
         {
             RootObject rootObject = movieService.FindMoviesInTheaterList(1, WebConfigurationManager.AppSettings["TMDBApiKey"]);
@@ -28,6 +31,7 @@ namespace MovieGenius2.Controllers
             return PartialView(rootObject.movies.Take(10));
         }
 
+
         public ActionResult Details (int id)
         {
             Movie rootObject = movieService.MovieInfo(id, WebConfigurationManager.AppSettings["TMDBApiKey"]);
@@ -44,5 +48,14 @@ namespace MovieGenius2.Controllers
 
             return View(rootObject);
         }
+
+
+        public ActionResult Slider()
+        {
+            RootObject rootObject = movieService.FindTopRatedMovies(1, WebConfigurationManager.AppSettings["TMDBApiKey"]);
+
+            return PartialView(rootObject.movies.Take(10));
+        }
+
     }
 }
