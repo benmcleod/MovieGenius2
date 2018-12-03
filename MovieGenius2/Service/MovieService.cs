@@ -4,7 +4,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace TMDBClassLibrary.Service
+namespace MovieGenius2
 {
     public class MovieService
     {
@@ -37,7 +37,7 @@ namespace TMDBClassLibrary.Service
         }
 
 
-        public RootObject FindLatestMovies(int page, string ApiKey)
+        public RootObject FindLatestMovie(int page, string ApiKey)
         {
             var url = string.Format(LIST_LATEST, ApiKey, page);
             return GetJsonResponse<RootObject>(url);

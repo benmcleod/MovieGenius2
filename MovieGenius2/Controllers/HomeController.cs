@@ -1,18 +1,21 @@
 ﻿using System.Linq;
 using System.Web.Configuration;
 using System.Web.Mvc;
-using TMDBClassLibrary.Service;
 
-namespace MovieGenius2.Controllers
+
+namespace MovieGenius2
 {
     public class HomeController : Controller
     {
         MovieService movieService = new MovieService();
 
-        // todo paging
+        // todo improve paging
+
+            
 
         public ActionResult Index(int index = 1)
         {
+
             RootObject rootObject = movieService.FindMoviesInTheaterList(index, WebConfigurationManager.AppSettings["TMDBApiKey"]);
 
             for (int i = 0; i < rootObject.movies.Count; i++)
@@ -59,6 +62,7 @@ namespace MovieGenius2.Controllers
             return PartialView(rootObject.movies.Take(10));
         }
 
+        // todo search page
         public ActionResult SearchBar()
         {
             return PartialView();

@@ -142,9 +142,9 @@ div.pro-description .synopsis {
     margin:auto;
 }
 
-.bx-wrapper{
-    margin-bottom:0;
-    margin:auto;
+.bx-wrapper {
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 /*#endregion */
