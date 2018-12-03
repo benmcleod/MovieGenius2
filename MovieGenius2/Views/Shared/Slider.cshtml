@@ -1,17 +1,19 @@
 ﻿@model IEnumerable<Movie>
 
 
+@{ /*todo slider arrows sit ontop of autocomplete*/ }
+
 <div class="bxslider">
 
     @foreach (var item in Model)
     {
 
-    <div>
+        <div>
 
-        <a id="@item.id" href="@Url.Action("Details", "Home", new { id = item.id })">
-            <img src="@Url.Content( "http://image.tmdb.org/t/p/w185" + @item.poster_path )" />
-        </a>
-    </div>
+            <a id="@item.id" href="@Url.Action("Details", "Home", new { id = item.id })">
+                <img src="@Url.Content( "http://image.tmdb.org/t/p/w185" + @item.poster_path )" />
+            </a>
+        </div>
 
     }
 

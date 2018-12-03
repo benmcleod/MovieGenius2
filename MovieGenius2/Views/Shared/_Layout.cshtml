@@ -17,6 +17,7 @@
 
 
     <div class="container">
+        @{ /*todo navbar hides behind top bar of mobile devices*/ }
         <nav class="navbar navbar-inverse fixed-top navbar-expand" style="background-color:black">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -27,7 +28,6 @@
                     </a>
                 </div>
 
-                @{ /*todo navbar hides behind top bar of mobile devices*/ }
                 <div id="navbar1" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav ml-auto">
                         <li><a href="@Url.Action("About", "Home")">About</a></li>
