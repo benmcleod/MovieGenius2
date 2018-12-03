@@ -116,6 +116,7 @@ div.pro-description .synopsis {
     font-size: large;
     padding-top: 25px;
     padding-bottom: 25px;
+    margin-right:20px;
 }
 
 .container .navbar-toggle {
@@ -175,7 +176,7 @@ div.pro-description .synopsis {
     padding: 0 0 0 20px;
     width: 250px;
     border: none;
-    background: url(../images/search_box_page.png) no-repeat 0 0;
+    background: url(../Images/search_box_page.png) no-repeat 0 0;
     outline: none;
 }
 

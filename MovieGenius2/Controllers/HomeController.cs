@@ -9,7 +9,8 @@ namespace MovieGenius2
     {
         MovieService movieService = new MovieService();
 
-        // todo improve paging
+        // todo improve paging - prev next
+        // todo error handling - some entries lacking video links
 
             
 
@@ -62,10 +63,17 @@ namespace MovieGenius2
             return PartialView(rootObject.movies.Take(10));
         }
 
+
         // todo search page
         public ActionResult SearchBar()
         {
             return PartialView();
+        }
+
+
+        public ActionResult About()
+        {
+            return View();
         }
 
     }

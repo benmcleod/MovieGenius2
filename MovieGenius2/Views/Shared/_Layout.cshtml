@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieGenius</title>
 
-    @*@Scripts.Render("~/bundles/modernizr")*@
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
     @Styles.Render("~/Content/css")
@@ -23,15 +21,16 @@
             <div class="container-fluid">
                 <div class="navbar-header">
 
+                    @{ /*todo image needs to shrink to fit screen*/ }
                     <a class="navbar-brand" href="@Url.Action("Index", "Home")">
-                        <img src="~/images/logo2.png" />
+                        <img src="~/Images/logo2.png" />
                     </a>
                 </div>
 
-                @{ /*todo add navbar links*/ }
+                @{ /*todo navbar hides behind top bar of mobile devices*/ }
                 <div id="navbar1" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
+                    <ul class="nav navbar-nav ml-auto">
+                        <li><a href="@Url.Action("About", "Home")">About</a></li>
 
                     </ul>
                 </div>
