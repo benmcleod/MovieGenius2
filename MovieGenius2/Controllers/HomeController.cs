@@ -10,7 +10,6 @@ namespace MovieGenius2
         MovieService movieService = new MovieService();
 
         // todo improve paging - prev next
-        // todo error handling - some entries lacking video links
 
             
 
@@ -22,6 +21,10 @@ namespace MovieGenius2
             for (int i = 0; i < rootObject.movies.Count; i++)
             { 
                 rootObject.movies[i].overview = rootObject.movies[i].overview.Split('.').First();
+
+                rootObject.movies[i].poster_path = (rootObject.movies[i].poster_path == null)
+                    ? "~/Images/default-movie.png"
+                    : "http://image.tmdb.org/t/p/w185" + rootObject.movies[i].poster_path;
             }
             ViewBag.index = index;
             ViewBag.startPages = (index - 5 >= 1) ? index - 5 : 1;
@@ -42,15 +45,27 @@ namespace MovieGenius2
         {
             Movie rootObject = movieService.MovieInfo(id, WebConfigurationManager.AppSettings["TMDBApiKey"]);
 
-            rootObject.backdrop_path = "http://image.tmdb.org/t/p/w1280" + rootObject.backdrop_path;
+            rootObject.poster_path = (rootObject.poster_path != null) 
+                ? "http://image.tmdb.org/t/p/w185" + rootObject.poster_path 
+                : "~/Images/default-movie.png";
 
-            rootObject.key = "https://www.youtube.com/embed/" + rootObject.videos.results[0].key;
+            if (rootObject.videos.results.Count() > 0)
+                rootObject.key = "https://www.youtube.com/embed/" + rootObject.videos.results[0].key;
 
-            rootObject.genres[0].name = string.Join(", ", rootObject.genres.Select(x => x.name));
+            if (rootObject.genres.Count() > 0)
+                rootObject.genres[0].name = string.Join(", ", rootObject.genres.Select(x => x.name));
+            else
+                rootObject.genres.Add(new Genre() { name = "" });
 
-            rootObject.credits.cast[0].name = string.Join(", ", rootObject.credits.cast.Select(x => x.name).Take(16).ToList());
+            if (rootObject.credits.cast.Count() > 0)
+                rootObject.credits.cast[0].name = string.Join(", ", rootObject.credits.cast.Select(x => x.name).Take(16).ToList());
+            else
+                rootObject.credits.cast.Add(new Cast() { name = "" });
 
-            rootObject.credits.crew[0].name = string.Join(", ", rootObject.credits.crew.FindAll(x => x.job.Equals("Director")).Select(x => x.name).ToList());
+            if (rootObject.credits.crew.Count() > 0)
+                rootObject.credits.crew[0].name = string.Join(", ", rootObject.credits.crew.FindAll(x => x.job.Equals("Director")).Select(x => x.name).ToList());
+            else
+                rootObject.credits.crew.Add(new Crew() { name = "" });
 
             return View(rootObject);
         }

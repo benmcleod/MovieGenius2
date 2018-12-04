@@ -22,7 +22,7 @@
             <div class="col-md-6 col-lg-6">
                 <div class="movie-summary">
                     <a id="@item.id" href="@Url.Action("Details", "Home", new { id = item.id })">
-                        <img class="image" src="@Url.Content("http://image.tmdb.org/t/p/w185" + @item.poster_path)" />
+                        <img class="image" src="@Url.Content(@item.poster_path)" />
                     </a>
                     <div class="pro-description">
                         <h4>
