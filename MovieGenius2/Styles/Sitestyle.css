@@ -58,13 +58,12 @@ div.pro-description .synopsis {
     }
 
 
+
+
 /*#endregion */
-
-
 /*#region movie summary*/
-
-.content{
-    margin-top:-16px;
+.content {
+    margin-top: -16px;
 }
 
 .content h2 {

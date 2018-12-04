@@ -8,10 +8,7 @@ namespace MovieGenius2
     public class HomeController : Controller
     {
         MovieService movieService = new MovieService();
-
-        // todo improve paging - prev next
-
-            
+                    
 
         public ActionResult Index(int index = 1)
         {
@@ -31,8 +28,21 @@ namespace MovieGenius2
 
             //paging
             ViewBag.index = index;
-            ViewBag.startPages = (index - 5 >= 1) ? index - 5 : 1;
-            ViewBag.endPages = (index + 5 <= rootObject.total_pages) ? index + 5 : rootObject.total_pages;
+            if (index < 5)
+            {
+                ViewBag.startPages = 1;
+                ViewBag.endPages = 10;
+            }
+            else if (rootObject.total_pages - index < 5)
+            {
+                ViewBag.startPages = rootObject.total_pages - 9;
+                ViewBag.endPages = rootObject.total_pages;
+            }
+            else
+            {
+                ViewBag.startPages = (index - 5 >= 1) ? index - 5 : 1;
+                ViewBag.endPages = (index + 5 <= rootObject.total_pages) ? index + 4 : rootObject.total_pages;
+            }
             return View(rootObject.movies);
         }
         
