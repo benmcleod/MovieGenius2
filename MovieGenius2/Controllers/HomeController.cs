@@ -20,12 +20,16 @@ namespace MovieGenius2
 
             for (int i = 0; i < rootObject.movies.Count; i++)
             { 
+                //shortens the overview so it fits one the screen
                 rootObject.movies[i].overview = rootObject.movies[i].overview.Split('.').First();
 
+                //adds the path to the poster location, or inserts a default poster
                 rootObject.movies[i].poster_path = (rootObject.movies[i].poster_path == null)
                     ? "~/Images/default-movie.png"
                     : "http://image.tmdb.org/t/p/w185" + rootObject.movies[i].poster_path;
             }
+
+            //paging
             ViewBag.index = index;
             ViewBag.startPages = (index - 5 >= 1) ? index - 5 : 1;
             ViewBag.endPages = (index + 5 <= rootObject.total_pages) ? index + 5 : rootObject.total_pages;
@@ -44,6 +48,8 @@ namespace MovieGenius2
         public ActionResult Details (int id)
         {
             Movie rootObject = movieService.MovieInfo(id, WebConfigurationManager.AppSettings["TMDBApiKey"]);
+
+            // error handling for missing data
 
             rootObject.poster_path = (rootObject.poster_path != null) 
                 ? "http://image.tmdb.org/t/p/w185" + rootObject.poster_path 

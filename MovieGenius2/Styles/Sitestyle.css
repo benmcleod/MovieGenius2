@@ -107,9 +107,8 @@ div.pro-description .synopsis {
 }
 
 .navbar-brand > img {
-    height: 100%;
     padding: 5px;
-    width: auto;
+    width: 90%;
 }
 
 .container .nav > li > a {
@@ -182,6 +181,7 @@ div.pro-description .synopsis {
 
 ul.ui-autocomplete {
     list-style: none;
+    z-index:10000;
 }
 
 
