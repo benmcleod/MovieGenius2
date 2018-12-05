@@ -208,8 +208,8 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="favicon.ico" />
     <Content Include="Images\default-movie.png" />
     <Content Include="Images\logo2.png" />
     <Content Include="Images\search_box_page.png" />
